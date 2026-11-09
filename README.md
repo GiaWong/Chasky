@@ -21,6 +21,14 @@ En Windows, activa el entorno con `venv\Scripts\activate` en lugar de `source ve
 
 Ejecuta los comandos desde la raíz del repositorio.
 
+### Interfaz gráfica
+
+```bash
+python src/gui.py
+```
+
+La interfaz permite seleccionar una imagen PNG y un archivo `.txt` para ocultar el texto, o seleccionar una imagen con un mensaje para extraerlo. Tkinter viene con Python en la mayoría de las instalaciones; en Linux puede ser necesario instalar el paquete del sistema `python3-tk`.
+
 ### Ocultar un mensaje
 
 ```bash
@@ -52,7 +60,10 @@ La capacidad depende de la imagen: se usan 3 bits por píxel y 32 bits se reserv
 ├── example/
 │   └── mascota.png    # Imagen de entrada para probar el programa
 ├── src/
-│   └── stego.py       # Implementación y comandos embed/extract
+│   ├── stego.py       # Implementación y comandos embed/extract
+│   ├── gui.py         # Aplicación y control de eventos de la interfaz
+│   ├── gui_views.py   # Construcción de widgets
+│   └── gui_operations.py  # Operaciones de lectura, ocultación y extracción
 ├── requirements.txt   # Dependencias con versiones fijadas
 ├── LICENSE
 ├── .gitignore
